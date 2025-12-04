@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Element Hider",
+  "version": "1.0",
+  "description": "Hide any element on any webpage permanently",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ]
+}

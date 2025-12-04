@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+  <style>
+
+ 
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap');
+
+    body {
+      width: 300px;
+      height: 500px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background-image: url(extensionBackground.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .gideon-roman-regular {
+  font-family: "Gideon Roman", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+    h2 {
+      margin: 0 0 15px 0;
+      font-size: 18px;
+      color: #333;
+    }
+    button {
+      width: 100%;
+      height: 50px;
+      padding: 12px;
+      margin-bottom: 10px;
+      /* animation: float 3s ease-in-out infinite; */
+      border: none;
+      border-radius: 20px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      font-family: Gideon Roman, serif;
+    font-weight: 500;
+        font-size: 15px;
+        /* color: #D1A41A; */
+    }
+    #startHiding {
+      /* background-color: #4CAF50; */
+        background-image: url(back.png);
+        background-position: center;
+        background-size: cover;
+        color: white;
+    }
+    #startHiding:hover {
+      background-color: #45a049;
+    }
+    #clearAll {
+        /* background-color: #da190b; */
+     background-image: url(back.png);
+     background-size: cover;
+        background-position: center;
+        color: white;
+    }
+    #clearAll:hover {
+      background-color: #da190b;
+    }
+    #status {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 4px;
+      font-size: 13px;
+      text-align: center;
+    }
+    .success {
+      background-color: #d4edda;
+      color: #155724;
+    }
+    .info {
+      background-color: #d1ecf1;
+      color: #0c5460;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    .float-container {
+      position: relative;
+      animation: float 3s ease-in-out infinite;
+      width: 250px;
+      height: 250px;
+      right: 30px;
+      bottom: 0px;
+    }
+
+    #cloud {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    #phrase {
+    font-family: Gideon Roman, serif;
+      font-size: 12px;
+      color: #333;
+      position: absolute;
+      top: 44%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      font-weight: 1000;
+      text-align: center;
+      margin: 0;
+    }
+
+  </style>
+</head>
+<body>
+  <h2>Element Hider</h2>
+  <button id="startHiding">Start Hiding Elements</button>
+  <button id="clearAll">Clear All Hidden Elements</button>
+  <div class="float-container">
+    <h3 id="phrase">Je suis independant<br>si je ne veux pas la voir<br>je ne la vois pas.</h3>
+    <img id="cloud" src="cloudMessage-removebg-preview.png">
+  </div>
+  <div id="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
