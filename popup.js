@@ -22,7 +22,7 @@ document.getElementById('clearAll').addEventListener('click', async () => {
         target: { tabId: tab.id },
         func: () => location.reload()
       });
-      showStatus('All hidden elements cleared!', 'success');
+      showStatus('Tous les éléments cachés ont été restaurés !', 'success');
       setTimeout(() => window.close(), 1500);
     });
   });
@@ -119,7 +119,7 @@ function enableElementSelection() {
         
         chrome.storage.local.set({ [domain]: data }, () => {
           currentTarget.style.display = 'none';
-          showNotification('Element hidden!');
+          showNotification('Élément masqué !' )
         });
       });
     }
